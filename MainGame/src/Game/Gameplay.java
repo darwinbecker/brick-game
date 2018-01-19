@@ -4,17 +4,16 @@ import java.awt.Color;						// Background color library
 import java.awt.Graphics;					// Graphic library
 import java.awt.Graphics2D;
 import java.awt.Rectangle;					// Rectangle library
-import java.awt.event.ActionEvent;			// does actions
-import java.awt.event.ActionListener; 		// 
-import java.awt.event.KeyEvent;				// checks keys
-import java.awt.event.KeyListener;			// 
+import java.awt.event.ActionEvent;				// does actions
+import java.awt.event.ActionListener; 				// 
+import java.awt.event.KeyEvent;					// checks keys
+import java.awt.event.KeyListener;				// 
 
 import javax.swing.JPanel;					// class extension (Interface)
 import javax.swing.Timer;
 
 
 // implement interface and keys/action listeners
-//meine TODO-Methoden (action, key methods) müssen erstellt werden und in klasse vorhanden sein
 public class Gameplay extends JPanel implements KeyListener, ActionListener{
 	
 	// creating some variables
@@ -54,13 +53,13 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
 		
 		// background
 		g.setColor(Color.black);		// background = black
-		g.fillRect(1, 1, 700, 592);	// (x,y,width,height)
+		g.fillRect(1, 1, 700, 592);		// (x,y,width,height)
 		
 		// border
-		g.setColor(Color.yellow);	// border = yellow
-		g.fillRect(0, 0, 697, 3);	// upper border
-		g.fillRect(0, 0, 3, 592);	// left border
-		g.fillRect(697, 0, 3, 592);	// right border
+		g.setColor(Color.yellow);		// border = yellow
+		g.fillRect(0, 0, 697, 3);		// upper border
+		g.fillRect(0, 0, 3, 592);		// left border
+		g.fillRect(697, 0, 3, 592);		// right border
 		
 		// map
 		map.draw((Graphics2D)g);		// bricks = white
@@ -70,12 +69,11 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
 		g.fillRect(playerPosX, 550, 100, 8);
 		
 		// ball
-		g.setColor(Color.yellow);	// ball = yellow
+		g.setColor(Color.yellow);		// ball = yellow
 		g.fillOval(ballPosX, ballPosY, 20, 20);
 		
 		g.dispose();
 	}
-	
 	
 	//@Override
 	public void actionPerformed(ActionEvent e) {
